@@ -1,17 +1,28 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div v-for="(item, i) in items" :key="i">
+      <Header  :config="item" v-if="items.length > 3" />
+    </div>
+      <!-- {{ myData }} -->
+    <!-- <img alt="Vue logo" src="./assets/logo.png">
+    <HelloWorld msg="Welcome to Your Vue.js App"/> -->
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Header from './components/Header.vue'
+
+const Courses = require('./data/courses.json');
 
 export default {
   name: 'app',
+  data() {
+    return {
+      items: Courses
+    }
+  },
   components: {
-    HelloWorld
+    Header
   }
 }
 </script>
