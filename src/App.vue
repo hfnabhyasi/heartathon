@@ -1,41 +1,22 @@
 <template>
-  <div id="app" class="container">
-    <h1 class="text-primary">Sample Data : </h1>
-    <div class="row">
-      <template v-for="(card, i) in cardContent"  >
-        <div class="col-3 my-2" :key="i">
-          <TutorialCard :content="card" />
-        </div>
-      </template>
-    </div>
-  </div>
+<div>
+  <HeaderComp :content="{heading:'Yoga Courses & Events',description:'Lorem Ipsum is simply dummy text of the printing and typesetting industry'}"
+    :styles="{heading:'h3',description:'h6'}"
+  />
+  <Card :content="{price:'Free',heading:'Science of Yoga - Heartfulness Way',description:'Instructor'}" />
+  <Card :content="{price:'$20',heading:'Hatha Yoga',description:'Online...'}" />
+</div>
 </template>
 
 <script>
-import TutorialCard from './components/TutorialCard'
-import $ from 'jquery'
-
+import HeaderComp from "./components/HeaderComp"
+import Card from "./components/Card"
 export default {
-  name: 'app',
-  data() {
-    return {
-      cardContent: undefined
-    }
-  },
-  components: {
-    TutorialCard
-  },
-  mounted
+components:{
+  HeaderComp,Card
 }
-function mounted() {
-  try {
-      $
-        .get('https://jsonplaceholder.typicode.com/posts')
-        .then(res => this.cardContent = res)
-  } catch (e) {
-    // console.error(e);
-  }
 }
+
 </script>
 
 <style>
