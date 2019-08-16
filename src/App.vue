@@ -1,16 +1,10 @@
 <template>
-<div>
-  <div class="container">
-    <HeaderComp
-      :content="HeaderData"
-      :styles="{heading:'h3',description:'h6'}"
-    />
-
-    <!-- CourseRow  -->
-    <CourseRow />
-
+  <div>
+    <div class="container">
+      <HeaderComp :content="HeaderData" :styles="{heading:'h3',description:'h6'}" />
+      <CourseRow />
+    </div>
   </div>
-</div>
 </template>
 
 <script>
@@ -24,12 +18,11 @@ export default {
       HeaderData
     }
   },
-  components:{
+  components: {
     HeaderComp,
     CourseRow
   }
 }
-
 </script>
 
 <style>
