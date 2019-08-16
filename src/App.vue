@@ -1,39 +1,43 @@
 <template>
-  <div id="app">
-    <div v-for="(item, i) in items" :key="i">
-      <Header  :config="item" v-if="items.length > 3" />
+  <div id="app" class="container">
+    <h1 class="text-primary">Sample Data : </h1>
+    <div class="row">
+      <template v-for="(card, i) in cardContent"  >
+        <div class="col-3 my-2" :key="i">
+          <TutorialCard :content="card" />
+        </div>
+      </template>
     </div>
-      <!-- {{ myData }} -->
-    <!-- <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/> -->
   </div>
 </template>
 
 <script>
-import Header from './components/Header.vue'
-
-const Courses = require('./data/courses.json');
+import TutorialCard from './components/TutorialCard'
+import $ from 'jquery'
 
 export default {
   name: 'app',
   data() {
     return {
-      items: Courses
+      cardContent: undefined
     }
   },
   components: {
-    Header
+    TutorialCard
+  },
+  mounted
+}
+function mounted() {
+  try {
+      $
+        .get('https://jsonplaceholder.typicode.com/posts')
+        .then(res => this.cardContent = res)
+  } catch (e) {
+    // console.error(e);
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
