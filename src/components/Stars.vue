@@ -1,12 +1,17 @@
 <template>
-    <div>
-       <img class="space fas fa-star" v-bind:key="n" v-for="n in rating" src="http:placehold.it/5px*5px"/>
+    <div>        
+        <template  v-for="n in rating">
+            <span :key="n" class="fas fa-star checked" ></span>
+        </template>
+        <template  v-for="n in totalUncheck">
+            <span :key="n" class="fas fa-star unchecked" ></span>
+        </template>       
        <span class="small">{{rating}}({{numOfPeople}}) </span>
     </div>  
-
 </template>
 
 <script>
+
 export default {
     props :  {
         rating : {
@@ -19,13 +24,22 @@ export default {
             required: (true), 
             default: 0 
         }
+  },
+  computed: {
+    totalUncheck : function () {
+      return (5 - this.rating);
+    }
   }
 }
+
 </script>
 
-<style>
-  .space {
-      margin-right : 2px;
-  }  
+<style>  
+  .checked {
+      color:black;
+  }
+  .unchecked{
+      color: lightgray;
+  }
 </style>
 
