@@ -1,41 +1,18 @@
 <template>
-  <div id="app" class="container">
-    <h1 class="text-primary">Sample Data : </h1>
-    <div class="row">
-      <template v-for="(card, i) in cardContent"  >
-        <div class="col-3 my-2" :key="i">
-          <TutorialCard :content="card" />
-        </div>
-      </template>
-    </div>
+  <div id ="app">
+     <Stars :rating="5" :numOfPeople="28" ></Stars>
   </div>
 </template>
 
 <script>
-import TutorialCard from './components/TutorialCard'
-import $ from 'jquery'
-
+import Stars from './components/Stars'
+import { appendFile, appendFile } from 'fs';
 export default {
-  name: 'app',
-  data() {
-    return {
-      cardContent: undefined
-    }
-  },
-  components: {
-    TutorialCard
-  },
-  mounted
+   components : {
+     Stars
+   }
 }
-function mounted() {
-  try {
-      $
-        .get('https://jsonplaceholder.typicode.com/posts')
-        .then(res => this.cardContent = res)
-  } catch (e) {
-    // console.error(e);
-  }
-}
+
 </script>
 
 <style>
