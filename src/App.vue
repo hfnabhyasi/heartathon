@@ -23,6 +23,7 @@ export default {
     CourseRow
   }
 }
+
 </script>
 
 <style>

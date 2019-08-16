@@ -8,15 +8,20 @@
     <div class="text-right">
       {{content.price}}
     </div>
+    <hr />
+    <Stars />
   </div>
 </div>
 </template>
 
 <script>
 import HeaderComp from "./HeaderComp"
+import Stars from './Stars'
+
 export default {
   components:{
-    HeaderComp
+    HeaderComp,
+    Stars
   },
 
 props:[
