@@ -7,8 +7,10 @@
 
   <!-- CourseRow  -->
   <template v-for="(course,i) in courses">
-    <CourseListItem :content="course" :key="i"/>
+    <!-- <CourseListItem :content="course" :key="i"/> -->
+    <HoveredCard :content="course" :key="i"></HoveredCard>
   </template>
+
 </div>
 </template>
 
@@ -18,6 +20,7 @@ import HeaderComp from "./components/HeaderComp"
 import HeaderData from './data/header'
 import CourseListItem from  './components/CourseListItem'
 import courses from './data/courses'
+import HoveredCard from './components/HoveredCard'
 
 
 export default {
@@ -29,7 +32,8 @@ export default {
   },
   components: {
     HeaderComp,
-    CourseListItem
+    CourseListItem,
+    HoveredCard
 
     // CourseRow
   }
