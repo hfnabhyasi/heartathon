@@ -18,18 +18,20 @@
 import { showError } from '../utils'
 
 export default {
-  data() {
-    return {
-      isGrid: false,
-      isList: true
-    }
-  },
+  data,
   props:[ "isGridActive", "isListActive" ],
   methods: {
     toggleGridView,
     toggleListView
   },
   mounted
+}
+
+function data() {
+  return {
+    isGrid: false,
+    isList: true
+  }
 }
 
 function mounted() {
