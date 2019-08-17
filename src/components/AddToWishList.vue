@@ -12,21 +12,24 @@ export default {
       type: Boolean,
       default: false
     },
-    content :{
-      type : Object,
-      default : {}
+    content: {
+      type: Object,
+      default: () => {
+        return {
+
+        }
+      }
     }
   },
 
   methods: {
     addToWishList: function(event) {
-      if(this.toggleHeart){
+      if (this.toggleHeart) {
         this.toggleHeart = false;
-        event.target.title="Add to wishlist";
-      }
-      else {
+        event.target.title = "Add to wishlist";
+      } else {
         this.toggleHeart = true;
-        event.target.title="Remove From wishlist";
+        event.target.title = "Remove From wishlist";
       }
     }
   }
