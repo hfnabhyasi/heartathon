@@ -10,7 +10,6 @@
     <CourseListItem :content="course" :key="i"/>
   </template>
 </div>
-
 </template>
 
 <script>

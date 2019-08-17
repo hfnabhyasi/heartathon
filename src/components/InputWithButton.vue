@@ -1,20 +1,15 @@
-<template>
-    <div>
-        <input type="text"  :placeholder = "placeholder" />    
-        <input type="button" :value = "buttontext"/>
-    </div>
+<template lang="html">
+  <div>
+      <input type="text" :placeholder="placeholder" />
+      <input type="button" :value="submitText" />
+  </div>
 </template>
-
 
 <script>
 export default {
-    props : ["placeholder","buttontext"]
+  props:[ "placeholder", "submitText" ]
 }
 </script>
 
-<style>
-
+<style lang="css" scoped>
 </style>
-
-    
-
