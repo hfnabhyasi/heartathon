@@ -1,8 +1,8 @@
 <template lang="html">
   <div>
     <select @change="onChange($event);">
-      <option value="all">Categories...</option>
-      <option value="yoga" selected>Yoga</option>
+      <option value="all" selected>All Categories...</option>
+      <option value="yoga">Yoga</option>
       <option value="meditation">Meditation</option>
       <option value="relaxation">Relaxation</option>
     </select>

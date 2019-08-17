@@ -1,5 +1,6 @@
 <template lang="html">
   <div>
+    <CategorySortDropdown @categoryOptionSelected="categoryOptionSelected" />
     <SortDropdown @sortOptionSelected="sortOptionSelected" />
 
     <GridListSwitch
@@ -26,6 +27,7 @@
 <script>
 import GridListSwitch from './GridListSwitch'
 import SortDropdown from './SortDropdown'
+import CategorySortDropdown from './CategorySortDropdown'
 
 export default {
   data() {
@@ -34,20 +36,30 @@ export default {
       isList: false,
       myData: [{
         createdDate: new Date(Date.now() - (1000 * 60 * 60)),
-        price: 100
+        price: 100,
+        type: 'yoga'
       },{
         createdDate: new Date(),
-        price: 200
+        price: 200,
+        type: 'meditation'
+      },{
+        createdDate: new Date(),
+        price: 350,
+        type: 'relaxation'
       }]
     }
   },
-  components: { GridListSwitch, SortDropdown },
-  methods: { showGridLayout, showListLayout, sortOptionSelected },
+  components: { GridListSwitch, SortDropdown, CategorySortDropdown },
+  methods: { showGridLayout, showListLayout, sortOptionSelected, categoryOptionSelected},
   mounted
 }
 
 function mounted() {
   this.myData.sort(sortByDate.bind(this, 'dateNewest'));
+}
+
+function categoryOptionSelected(category) {
+    alert(category);
 }
 
 function sortOptionSelected(sortOption) {
