@@ -18,7 +18,7 @@
     </div>
 
     <pre class="pre pre-scrollable bg-primary text-white">
-      {{ myData }}
+      {{ displayedData }}
     </pre>
 
   </div>
@@ -34,6 +34,7 @@ export default {
     return {
       isGrid: true,
       isList: false,
+      displayedData: [],
       myData: [{
         createdDate: new Date(Date.now() - (1000 * 60 * 60)),
         price: 100,
@@ -59,7 +60,12 @@ function mounted() {
 }
 
 function categoryOptionSelected(category) {
-    alert(category);
+    alert(category)
+    this.displayedData = this.myData.filter(
+      item => category === 'all' ?
+        true :
+        item.type === category
+    );
 }
 
 function sortOptionSelected(sortOption) {
