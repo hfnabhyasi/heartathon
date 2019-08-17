@@ -26,15 +26,16 @@ export default {
       isList: false
     }
   },
-  methods:{
+  methods: {
     toggleGridView,
     toggleListView
   }
 }
 
 function toggleGridView() {
-    alert('toggle grid...')
+  alert('toggle grid...')
 }
+
 function toggleListView() {
   alert('toggle list')
 }
