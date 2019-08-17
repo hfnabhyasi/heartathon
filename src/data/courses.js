@@ -3,7 +3,7 @@ export default [{
     heading: 'Science of Yoga',
     description: 'Instructor',
     imgSrc: 'https://placehold.it/600x300',
-    rating: 4,
+    rating: 3,
     ratingNumberOfPeople: 228
   }, {
     price: '$ 20',

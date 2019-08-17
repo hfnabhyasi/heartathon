@@ -1,8 +1,11 @@
 <template lang="html">
   <div>
-    <Star />
-    <i class="fas fa-user"></i>
-    {{ content.rating }} {{ content.ratingNumberOfPeople }}</div>
+    <Star :content="{solid: content.rating >= 1}" />
+    <Star :content="{solid: content.rating >= 2}" />
+    <Star :content="{solid: content.rating >= 3}" />
+    <Star :content="{solid: content.rating >= 4}" />
+    <Star :content="{solid: content.rating >= 5}" />
+  </div>
 
 </template>
 
