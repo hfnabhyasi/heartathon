@@ -1,18 +1,29 @@
 <template>
-    <div>
-      <InputWithButton submitText="Submit this form" placeholder="Hello..."/>
-      <InputWithButton submitText="Submit another form..." placeholder="World..."/>
+  <div>
+    <div class="container">
+      <HeaderComp :content="HeaderData" :styles="{heading:'h3',description:'h6'}" />
+      <CourseRow />
     </div>
+  </div>
 </template>
 
 <script>
-import InputWithButton from './components/InputWithButton'
+import HeaderComp from "./components/HeaderComp"
+import CourseRow from "./components/CourseRow"
+import HeaderData from './data/header'
 
 export default {
-  components:{
-    InputWithButton
+  data() {
+    return {
+      HeaderData
+    }
+  },
+  components: {
+    HeaderComp,
+    CourseRow
   }
 }
+
 </script>
 
 <style>
