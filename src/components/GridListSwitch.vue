@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import {showError} from '../utils'
+import { showError } from '../utils'
 
 export default {
   data() {
