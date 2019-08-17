@@ -30,18 +30,19 @@
 </template>
 
 <script>
-import HeaderComp from "./HeaderComp"
 import CourseInfo from "./CourseInfo"
 import AddToWishList from './AddToWishList'
 import Rating from './Rating'
 
 export default {
-  components:{
-    HeaderComp, CourseInfo,AddToWishList,Rating
+  components: {
+    CourseInfo,
+    AddToWishList,
+    Rating
   },
-props:[
-  "content"
-]
+  props: [
+    "content"
+  ]
 }
 </script>
 
