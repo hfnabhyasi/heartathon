@@ -30,37 +30,39 @@ import SortDropdown from './SortDropdown'
 import CategorySortDropdown from './CategorySortDropdown'
 
 export default {
-  data() {
-    return {
-      isGrid: true,
-      isList: false,
-      displayedData: [],
-      myData: [{
-        createdDate: new Date(Date.now() - (1000 * 60 * 60)),
-        price: 100,
-        type: 'yoga'
-      },{
-        createdDate: new Date(),
-        price: 200,
-        type: 'meditation'
-      },{
-        createdDate: new Date(),
-        price: 350,
-        type: 'relaxation'
-      }]
-    }
-  },
+  data,
   components: { GridListSwitch, SortDropdown, CategorySortDropdown },
-  methods: { showGridLayout, showListLayout, sortOptionSelected, categoryOptionSelected},
+  methods: { showGridLayout, showListLayout, sortOptionSelected, categoryOptionSelected },
   mounted
 }
 
+function data() {
+  return {
+    isGrid: true,
+    isList: false,
+    displayedData: [],
+    myData: [{
+      createdDate: new Date(Date.now() - (1000 * 60 * 60)),
+      price: 100,
+      type: 'yoga'
+    },{
+      createdDate: new Date(),
+      price: 200,
+      type: 'meditation'
+    },{
+      createdDate: new Date(),
+      price: 350,
+      type: 'relaxation'
+    }]
+  }
+}
+
 function mounted() {
-  this.myData.sort(sortByDate.bind(this, 'dateNewest'));
+  this.displayedData = this.myData;
+  this.displayedData.sort(sortByDate.bind(this, 'dateNewest'));
 }
 
 function categoryOptionSelected(category) {
-    alert(category)
     this.displayedData = this.myData.filter(
       item => category === 'all' ?
         true :
@@ -70,11 +72,11 @@ function categoryOptionSelected(category) {
 
 function sortOptionSelected(sortOption) {
   if(sortOption === 'priceLowToHigh')
-    this.myData.sort(sortByPrice.bind(this, sortOption));
+    this.displayedData.sort(sortByPrice.bind(this, sortOption));
   else if (sortOption === 'priceHighToLow')
-    this.myData.sort(sortByPrice.bind(this, sortOption));
+    this.displayedData.sort(sortByPrice.bind(this, sortOption));
   else if (sortOption === 'dateOldest')
-    this.myData.sort(sortByDate.bind(this, sortOption));
+    this.displayedData.sort(sortByDate.bind(this, sortOption));
   else if (sortOption === 'dateNewest')
     this.myData.sort(sortByDate.bind(this, sortOption));
 }
@@ -98,6 +100,7 @@ function showListLayout() {
   this.isGrid = false;
   this.isList = true;
 }
+
 </script>
 
 <style lang="css" scoped>
