@@ -8,20 +8,25 @@
     <div class="text-right">
       {{content.price}}
     </div>
+    <hr />
+    <Rating :content="content" />
   </div>
 </div>
 </template>
 
 <script>
 import HeaderComp from "./HeaderComp"
+import Rating from './Rating'
+
 export default {
   components:{
-    HeaderComp
+    HeaderComp,
+    Rating
   },
 
-props:[
-  "content"
-]
+  props:[
+    "content"
+  ]
 }
 </script>
 

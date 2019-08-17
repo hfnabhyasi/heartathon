@@ -5,14 +5,25 @@
       <img src="https://placehold.it/480x320" alt="heartfulness" class="img-fluid">
     </div>
     <div class="col-6">
-      <i class="fas fa-user-alt"></i>
+
+      <i class="h3 far fa-user-circle"></i>
+
+      <span class="ml-2">{{content.description}}</span>
+
       <div>
-        {{content.description}}
         <h6>{{content.heading}}</h6>
       </div>
+
+      <CourseInfo :content="content" />
+
+      <div>
+      <span>{{content.details}}</span>
+    </div>
     </div>
     <div class="col-3 border-left">
-      Part 3
+      <AddToWishList :content="content"></AddToWishList>
+    <div>  {{content.price}}</div>
+    <Rating :content="content"></Rating>
     </div>
   </div>
 </div>
@@ -20,9 +31,13 @@
 
 <script>
 import HeaderComp from "./HeaderComp"
+import CourseInfo from "./CourseInfo"
+import AddToWishList from './AddToWishList'
+import Rating from './Rating'
+
 export default {
   components:{
-    HeaderComp
+    HeaderComp, CourseInfo,AddToWishList,Rating
   },
 props:[
   "content"

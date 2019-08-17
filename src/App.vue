@@ -1,17 +1,16 @@
 <template>
-<div>
-  <div class="container">
-    <HeaderComp
-      :content="HeaderData"
-      :styles="{heading:'h3',description:'h6'}"
-    />
+<div class="container">
+  <HeaderComp
+    :content="HeaderData"
+    :styles="{heading:'h3',description:'h6'}"
+  />
 
-    <!-- CourseRow  -->
-    <template v-for="(course,i) in courses">
+  <!-- CourseRow  -->
+  <template v-for="(course,i) in courses">
     <CourseListItem :content="course" :key="i"/>
   </template>
-  </div>
 </div>
+
 </template>
 
 <script>
@@ -21,6 +20,7 @@ import HeaderData from './data/header'
 import CourseListItem from  './components/CourseListItem'
 import courses from './data/courses'
 
+
 export default {
   data() {
     return {
@@ -28,9 +28,10 @@ export default {
       courses
     }
   },
-  components:{
+  components: {
     HeaderComp,
     CourseListItem
+
     // CourseRow
   }
 }
