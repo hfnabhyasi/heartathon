@@ -24,7 +24,7 @@
       <div class="text-right">
       <AddToWishList :content="content"></AddToWishList>
     <div>  {{content.price}}</div>
-    <Rating :content="content"></Rating>
+    <RatingA :content="content"></RatingA>
     <button type="button" class="btn btn-primary my-4">Preview this course</button>
     </div>
   </div>
@@ -35,13 +35,13 @@
 <script>
 import CourseInfo from "./CourseInfo"
 import AddToWishList from './AddToWishList'
-import Rating from './Rating'
+import RatingA from './Rating-A'
 
 export default {
   components: {
     CourseInfo,
     AddToWishList,
-    Rating
+    RatingA
   },
   props: [
     "content"

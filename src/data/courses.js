@@ -40,6 +40,8 @@ export default [{
     description: 'August 1st to August 29th, 2019',
     imgSrc: 'https://placehold.it/600x300',
     level: 'All levels',
+    rating: 4,
+    ratingNumberOfPeople: 800,
     noOfVideos: 5,
     duration: 16,
     hasSubtitles: true,
