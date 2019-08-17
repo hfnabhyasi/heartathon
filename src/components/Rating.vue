@@ -5,15 +5,18 @@
     <Star :content="{solid: content.rating >= 3}" />
     <Star :content="{solid: content.rating >= 4}" />
     <Star :content="{solid: content.rating >= 5}" />
+    <RatingScore :content="content" />
   </div>
 
 </template>
 
 <script>
 import Star from "./Stars"
+import RatingScore from './RatingScore'
+
 export default {
   props:["content"],
-  components: { Star }
+  components: { Star, RatingScore }
 }
 </script>
 

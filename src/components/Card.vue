@@ -2,8 +2,9 @@
   <div class="card  h-100 justify-content-around">
   <img class="card-img-top" :src="content.imgSrc" alt="Card image cap">
   <div class="card-body">
-    <HeaderComp :content="{heading:content.heading,description:content.description}"
-    :styles="{heading:'card-title h5 text-primary',description:'card-text h6'}"
+    <HeaderComp
+      :content="content"
+      :styles="{heading:'card-title h5 text-primary',description:'card-text h6'}"
     />
     <div class="text-right">
       {{content.price}}
@@ -23,7 +24,6 @@ export default {
     HeaderComp,
     Rating
   },
-
   props:[
     "content"
   ]
