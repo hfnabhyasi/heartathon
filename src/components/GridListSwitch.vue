@@ -1,29 +1,26 @@
 <template lang="html">
-  <div>
-    <button
-      type="button"
-      class="border-0 bg-white text-dark mx-2 p-0"
-      @click="toggleListView();"
-    >
-      <i class="h2 fas fa-list bg-dark text-white"></i>
-    </button>
+<div>
+  <i
+    @click="toggleListView();"
+    class="h2 fas fa-list c-pointer mx-2 p-2"
+    :class="{'bg-dark text-white': isList}"
+  ></i>
 
-    <button
-      type="button"
-      class="border border-primary bg-dark text-white mx-2 p-2 pb-0"
-      @click="toggleGridView();"
-    >
-      <i class="h2 fas fa-th"></i>
-    </button>
-  </div>
+  <i
+    @click="toggleGridView();"
+    class="h2 fas fa-th c-pointer mx-2 p-2"
+    :class="{'bg-dark text-white': isGrid}"
+  >
+  </i>
+</div>
 </template>
 
 <script>
 export default {
   data() {
     return {
-      isGrid: true,
-      isList: false
+      isGrid: false,
+      isList: true
     }
   },
   methods: {
@@ -33,11 +30,13 @@ export default {
 }
 
 function toggleGridView() {
-  alert('toggle grid...')
+  this.isGrid = true;
+  this.isList = false;
 }
 
 function toggleListView() {
-  alert('toggle list')
+  this.isGrid = false;
+  this.isList = true;
 }
 </script>
 
