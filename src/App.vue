@@ -1,10 +1,10 @@
 <template>
-  <div>
-    <div class="container">
-      <HeaderComp :content="HeaderData" :styles="{heading:'h3',description:'h6'}" />
-      <CourseRow />
-    </div>
+<div>
+  <div class="container">
+    <HeaderComp :content="HeaderData" :styles="{heading:'h3',description:'h6'}" />
+    <CourseRow />
   </div>
+</div>
 </template>
 
 <script>
