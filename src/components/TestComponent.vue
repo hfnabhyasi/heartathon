@@ -47,7 +47,6 @@ export default {
 }
 
 function mounted() {
-  // console.log(typeof this.myData)
   this.myData.sort(sortByDate.bind(this, 'dateNewest'));
 }
 
