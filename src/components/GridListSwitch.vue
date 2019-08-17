@@ -15,6 +15,8 @@
 </template>
 
 <script>
+import {showError} from '../utils'
+
 export default {
   data() {
     return {
@@ -35,7 +37,7 @@ function mounted() {
       this.isGrid = this.isGridActive;
       this.isList = this.isListActive;
   } catch (e) {
-    
+    showError.call(e);
   }
 }
 
