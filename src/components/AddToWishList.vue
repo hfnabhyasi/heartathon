@@ -8,19 +8,10 @@
 <script>
 export default {
   props: {
-    activeHeart: {
+    toggleHeart: {
       type: Boolean,
       default: false
     },
-      inactiveHeart: {
-        type: Boolean,
-        default: true
-      },
-      toggleHeart: {
-        type: Boolean,
-        default: false
-      },
-
     content :{
       type : Object,
       default : {}
@@ -31,14 +22,10 @@ export default {
     addToWishList: function(event) {
       if(this.toggleHeart){
         this.toggleHeart = false;
-        this.inactiveHeart = true;
-        this.activeHeart = false;
         event.target.title="Add to wishlist";
       }
       else {
         this.toggleHeart = true;
-        this.inactiveHeart = false;
-        this.activeHeart = true;
         event.target.title="Remove From wishlist";
       }
     }

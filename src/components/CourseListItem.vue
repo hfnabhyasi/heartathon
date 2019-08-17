@@ -21,11 +21,14 @@
     </div>
     </div>
     <div class="col-3 border-left">
+      <div class="text-right">
       <AddToWishList :content="content"></AddToWishList>
     <div>  {{content.price}}</div>
     <Rating :content="content"></Rating>
+    <button type="button" class="btn btn-primary my-4">Preview this course</button>
     </div>
   </div>
+</div>
 </div>
 </template>
 
