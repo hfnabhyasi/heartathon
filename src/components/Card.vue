@@ -9,24 +9,24 @@
       {{content.price}}
     </div>
     <hr />
-    <Stars />
+    <Rating :content="content" />
   </div>
 </div>
 </template>
 
 <script>
 import HeaderComp from "./HeaderComp"
-import Stars from './Stars'
+import Rating from './Rating'
 
 export default {
   components:{
     HeaderComp,
-    Stars
+    Rating
   },
 
-props:[
-  "content"
-]
+  props:[
+    "content"
+  ]
 }
 </script>
 

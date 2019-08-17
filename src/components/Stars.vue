@@ -1,13 +1,5 @@
 <template>
-    <div>        
-        <template  v-for="n in rating">
-            <span :key="n" class="fas fa-star checked" ></span>
-        </template>
-        <template  v-for="n in totalUncheck">
-            <span :key="n" class="fas fa-star unchecked" ></span>
-        </template>       
-       <span class="small">{{rating}}({{numOfPeople}}) </span>
-    </div>  
+    <span class="h5 fa-star"></span>
 </template>
 
 <script>
@@ -15,14 +7,14 @@
 export default {
     props :  {
         rating : {
-            type: Number, 
-            required: (true), 
-            default: 0 
+            type: Number,
+            required: (true),
+            default: 0
         },
         numOfPeople :{
-            type: Number, 
-            required: (true), 
-            default: 0 
+            type: Number,
+            required: (true),
+            default: 0
         }
   },
   computed: {
@@ -34,7 +26,7 @@ export default {
 
 </script>
 
-<style>  
+<style>
   .checked {
       color:black;
   }
@@ -42,4 +34,3 @@ export default {
       color: lightgray;
   }
 </style>
-
