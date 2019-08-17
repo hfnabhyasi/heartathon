@@ -27,7 +27,8 @@
       </div>
       <div class="row  border-top">
         <div class="col-8 text-left my-2">
-          <Rating :content="content"></Rating>
+          <AddToWishListS :content="content"></AddToWishListS>
+          <!-- <Rating :content="content"></Rating> -->
         </div>
         <div class="col-4 my-2 text-right">  {{content.price}}</div>
       </div>
@@ -39,14 +40,14 @@
 import HeaderComp from "./HeaderComp"
 import Rating from './Rating'
 import CourseInfo from './CourseInfo'
-import AddToWishList from './AddToWishList'
+import AddToWishListS from './AddToWishList-Status'
 
 export default {
   components: {
     HeaderComp,
     Rating,
     CourseInfo,
-    AddToWishList
+    AddToWishListS
   },
   props: [
     "content"
