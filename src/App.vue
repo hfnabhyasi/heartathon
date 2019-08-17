@@ -12,7 +12,7 @@
 import HeaderComp from "./components/HeaderComp"
 // import CourseRow from "./components/CourseRow"
 import HeaderData from './data/header'
-import GridListSwitch from './components/GridListSwitch'
+import GridListSwitch from './components/TestComponent'
 
 export default {
   data() {
