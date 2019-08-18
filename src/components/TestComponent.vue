@@ -21,12 +21,6 @@
           :key="i"
           :content="course"
         />
-        <!-- <pre class="pre pre-scrollable bg-primary text-white">
-          <h1>
-            List VIEW
-          </h1>
-          <p>{{ displayedData }}</p>
-        </pre> -->
       </div>
     </div>
   </div>
