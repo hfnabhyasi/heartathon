@@ -1,6 +1,6 @@
 <template lang="html">
   <div>
-    <select @change="onChange($event);">
+    <select class="custom-select" @change="onChange($event);">
       <option value="all" selected>All Categories...</option>
       <option value="yoga">Yoga</option>
       <option value="meditation">Meditation</option>

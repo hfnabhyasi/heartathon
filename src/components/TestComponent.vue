@@ -1,33 +1,33 @@
 <template lang="html">
   <div>
-    <CategorySortDropdown @categoryOptionSelected="categoryOptionSelected" />
-
-    <SortDropdown @sortOptionSelected="sortOptionSelected" />
-
-    <GridListSwitch
+    <div class="navbar navbar-expand-lg navbar-light bg-light justify-content-around">
+      <SearchBar />
+      <CategorySortDropdown @categoryOptionSelected="categoryOptionSelected" />
+      <SortDropdown @sortOptionSelected="sortOptionSelected" />
+      <GridListSwitch
       :isGridActive="true"
       :isListActive="false"
       @toggleGridView="showGridLayout()"
       @toggleListView="showListLayout()"
-    />
-
+      />
+    </div>
     <div>
       <div v-if="isGrid">
         <pre class="pre pre-scrollable bg-primary text-white">
           <h1>
             Grid View
           </h1>
-          {{ displayedData }}
+          <p>{{ displayedData }}</p>
         </pre>
       </div>
       <div v-if="isList">
-            <pre class="pre pre-scrollable bg-primary text-white">
-              <h1>
-                List VIEW
-              </h1>
-              {{ displayedData }}
-            </pre>
-          </div>
+        <pre class="pre pre-scrollable bg-primary text-white">
+          <h1>
+            List VIEW
+          </h1>
+          <p>{{ displayedData }}</p>
+        </pre>
+      </div>
     </div>
   </div>
 </template>
@@ -35,11 +35,12 @@
 <script>
 import GridListSwitch from './GridListSwitch'
 import SortDropdown from './SortDropdown'
+import SearchBar from './SearchBar'
 import CategorySortDropdown from './CategorySortDropdown'
 
 export default {
   data,
-  components: { GridListSwitch, SortDropdown, CategorySortDropdown },
+  components: { GridListSwitch, SearchBar, SortDropdown, CategorySortDropdown },
   methods: { showGridLayout, showListLayout, sortOptionSelected, categoryOptionSelected },
   mounted
 }

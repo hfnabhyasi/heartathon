@@ -1,6 +1,6 @@
 <template lang="html">
   <div>
-    <select placeholder="Sort By..." @change="onChange($event);">
+    <select class="custom-select" placeholder="Sort By..." @change="onChange($event);">
       <option value="dateNewest" selected>Date - Newest</option>
       <option value="dateOldest">Date - Oldest</option>
       <option value="priceLowToHigh">Price - Low to High</option>
