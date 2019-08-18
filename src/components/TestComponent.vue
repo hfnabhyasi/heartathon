@@ -3,7 +3,7 @@
     <CategorySortDropdown @categoryOptionSelected="categoryOptionSelected" />
 
     <SortDropdown @sortOptionSelected="sortOptionSelected" />
-    <iframe width="720" height="405" src="https://www.youtube.com/embed/?listType=playlist&list=PL1QpxVYcCuCZYr_UDHYQ0O3z1uysRgTfa" frameborder="0" allowfullscreen></iframe>
+    
     <GridListSwitch
       :isGridActive="true"
       :isListActive="false"
