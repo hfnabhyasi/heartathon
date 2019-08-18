@@ -1,16 +1,23 @@
 <template lang="html">
   <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
-
-      <div class="carousel-item active ">
-        <div class="row m-0">
-          <div class="col-4 my-2" v-for="(course, i) in Courses" :key="i">
-            <Card :content="course" />
-            <!-- <template v-for="(course,i) in courses"> -->
-            <!-- <CourseListItem :content="course" :key="i"/> -->
+<!--  [1,2,3,4,5,6,7,8,9] >>> [[1,2,3],[4,5,6],[7,8,9]]-->
+      <template v-for="(r, i) in [['course1','course-2',3],[4,5,6],[7,8,9],[10,11]]">
+        <div class="carousel-item" :class="{ 'active': i === 0 }" :key="i">
+          <div class="row m-0">
+            <div class="col-4" v-for="(x, y) in r" :key="y">set-{{i}}, col-{{x}}</div>
+            <!-- <div class="col-4 my-2" v-for="(course, i) in Courses" :key="i">
+              <Card :content="course" /> -->
+              <!-- <template v-for="(course,i) in courses"> -->
+              <!-- <CourseListItem :content="course" :key="i"/> -->
+            <!-- </div>  -->
+            <!-- <div class="col-4">col-1</div>
+            <div class="col-4">col-2</div>
+            <div class="col-4">col-3</div> -->
           </div>
         </div>
-      </div>
+      </template>
+
     </div>
 
     <a class="carousel-control-prev ml--90px" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -25,7 +32,7 @@
 </template>
 
 <script>
-import Card from "./Card"
+// import Card from "./Card"
 import Courses from '../data/courses'
 export default {
   data() {
@@ -34,7 +41,7 @@ export default {
     }
   },
   components: {
-    Card
+    // Card
   }
 
 }
