@@ -2,10 +2,12 @@
   <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
 <!--  [1,2,3,4,5,6,7,8,9] >>> [[1,2,3],[4,5,6],[7,8,9]]-->
-      <template v-for="(r, i) in [['course1','course-2',3],[4,5,6],[7,8,9],[10,11]]">
+      <template v-for="(r, i) in Courses">
         <div class="carousel-item" :class="{ 'active': i === 0 }" :key="i">
           <div class="row m-0">
-            <div class="col-4" v-for="(x, y) in r" :key="y">set-{{i}}, col-{{x}}</div>
+            <div class="col-4"  v-for="(x, y) in r" :key="y">
+              <Card :content="x" />
+            </div>
             <!-- <div class="col-4 my-2" v-for="(course, i) in Courses" :key="i">
               <Card :content="course" /> -->
               <!-- <template v-for="(course,i) in courses"> -->
@@ -32,18 +34,39 @@
 </template>
 
 <script>
-// import Card from "./Card"
+import Card from "./Card"
 import Courses from '../data/courses'
 export default {
-  data() {
-    return {
-      Courses
-    }
-  },
+  data,
   components: {
-    // Card
+    Card
+  },
+  methods:{
+    method1
   }
+}
 
+function data() {
+  return {
+    Courses: Courses.reduce(reduceArr, {
+      finalArray: [],
+      currentIdx: -1
+    }).finalArray
+  }
+}
+
+function method1() {
+  //this
+}
+
+function reduceArr(r, item, i, arr) {
+
+  if (i % 3 === 0) {
+    r.currentIdx += 1;
+    r.finalArray[r.currentIdx] = [];
+  }
+  r.finalArray[r.currentIdx].push(item);
+  return r;
 }
 </script>
 
