@@ -17,8 +17,8 @@
       <CourseInfo :content="content" />
 
       <div>
-      <span>{{content.details}}</span>
-    </div>
+        <span>{{content.details}}</span>
+      </div>
     </div>
     <div class="col-3 border-left">
       <AddToWishList :content="content"></AddToWishList>

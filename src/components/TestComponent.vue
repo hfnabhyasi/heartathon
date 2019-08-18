@@ -1,6 +1,7 @@
 <template lang="html">
   <div>
     <CategorySortDropdown @categoryOptionSelected="categoryOptionSelected" />
+
     <SortDropdown @sortOptionSelected="sortOptionSelected" />
 
     <GridListSwitch
