@@ -4,105 +4,20 @@
 
       <div class="carousel-item active ">
         <div class="row m-0">
-          <div class="col-4">
-            <div class="card">
-      <img src="https://placehold.it/600x300" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Science of Yoga</h5>
-        <p class="card-text">Yoga makes life better</p>
-      </div>
-    </div>
-          </div>
-          <div class="col-4">
-            <div class="card">
-      <img src="https://placehold.it/600x300" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Meditation</h5>
-        <p class="card-text">Yoga makes life better</p>
-      </div>
-    </div>
-          </div>
-          <div class="col-4 ">
-            <div class="card">
-      <img src="https://placehold.it/600x300" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Heartfulness</h5>
-        <p class="card-text">Yoga makes life better</p>
-      </div>
-    </div>
+          <div class="col-4 my-2" v-for="(course, i) in Courses" :key="i">
+            <Card :content="course" />
+            <!-- <template v-for="(course,i) in courses"> -->
+            <!-- <CourseListItem :content="course" :key="i"/> -->
           </div>
         </div>
       </div>
+    </div>
 
-
-      <div class="carousel-item">
-        <div class="row m-0">
-          <div class="col-4 border border-primary">
-            <div class="card">
-      <img src="https://placehold.it/600x300" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Meditation through heart</h5>
-        <p class="card-text">Yoga makes life better</p>
-      </div>
-    </div>
-          </div>
-          <div class="col-4 border border-info">
-            <div class="card">
-      <img src="https://placehold.it/600x300" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Kanha Shanti Vanam</h5>
-        <p class="card-text">Yoga makes life better</p>
-      </div>
-    </div>
-          </div>
-          <div class="col-4 border border-success">
-            <div class="card">
-      <img src="https://placehold.it/600x300" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Science of Yoga</h5>
-        <p class="card-text">Yoga makes life better</p>
-      </div>
-    </div>
-          </div>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <div class="row m-0">
-          <div class="col-4 border border-primary">
-            <div class="card">
-      <img src="https://placehold.it/600x300" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Science of Yoga</h5>
-        <p class="card-text">Yoga makes life better</p>
-      </div>
-    </div>
-          </div>
-          <div class="col-4 border border-info">
-            <div class="card">
-      <img src="https://placehold.it/600x300" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Science of Yoga</h5>
-        <p class="card-text">Yoga makes life better</p>
-      </div>
-    </div>
-          </div>
-          <div class="col-4 border border-success">
-            <div class="card">
-      <img src="https://placehold.it/600x300" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Science of Yoga</h5>
-        <p class="card-text">Yoga makes life better</p>
-      </div>
-    </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+    <a class="carousel-control-prev ml--90px" href="#carouselExampleControls" role="button" data-slide="prev">
       <span class="carousel-control-prev-icon bg-dark" aria-hidden="true"></span>
       <span class="sr-only">Previous</span>
     </a>
-    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+    <a class="carousel-control-next mr--90px" href="#carouselExampleControls" role="button" data-slide="next">
       <span class="carousel-control-next-icon bg-dark" aria-hidden="true"></span>
       <span class="sr-only">Next</span>
     </a>
@@ -110,8 +25,26 @@
 </template>
 
 <script>
-export default {}
+import Card from "./Card"
+import Courses from '../data/courses'
+export default {
+  data() {
+    return {
+      Courses
+    }
+  },
+  components: {
+    Card
+  }
+
+}
 </script>
 
 <style lang="css" scoped>
+.ml--90px{
+  margin-left:-90px;
+}
+.mr--90px{
+  margin-right:-90px;
+}
 </style>
