@@ -1,5 +1,4 @@
 export default [{
-    price: 'Free',
     heading: 'Science of Yoga',
     description: 'Instructor',
     imgSrc: 'https://placehold.it/600x300',
@@ -9,9 +8,11 @@ export default [{
     noOfVideos: 6,
     duration: 16,
     hasSubtitles: true,
-    details: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard'
+    details: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard',
+    price: 300,
+    createdDate: "2019-08-18T02:24:32.856Z",
+    type: "meditation"
   }, {
-    price: '$ 20',
     heading: 'Meditation',
     description: 'Instructor',
     imgSrc: 'https://placehold.it/600x300',
@@ -21,10 +22,12 @@ export default [{
     noOfVideos: 5,
     duration: 16,
     hasSubtitles: false,
-    details: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard'
+    details: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard',
+    price: 250,
+    createdDate: "2019-08-18T02:24:32.856Z",
+    type: "meditation"
   },
   {
-    price: 'Free',
     heading: 'Philosophy of Yoga',
     description: 'Instructor',
     imgSrc: 'https://placehold.it/600x300',
@@ -33,9 +36,11 @@ export default [{
     duration: 16,
     hasSubtitles: true,
     rating: 2,
-    ratingNumberOfPeople: 350
+    ratingNumberOfPeople: 350,
+    price: 250,
+    createdDate: "2019-08-18T02:24:32.856Z",
+    type: "relaxation"
   }, {
-    price: 'Rs 45000',
     heading: 'Chennai - BMA',
     description: 'August 1st to August 29th, 2019',
     imgSrc: 'https://placehold.it/600x300',
@@ -44,8 +49,10 @@ export default [{
     duration: 16,
     hasSubtitles: true,
     details: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard',
+    price: 150,
+    createdDate: "2019-08-18T02:24:32.856Z",
+    type: "yoga"
   }, {
-    price: 'Rs 45000',
     heading: 'Hyderabad - Kanha Shanti Vanam',
     description: 'November 4th to November 30th, 2019',
     imgSrc: 'https://placehold.it/600x300',
@@ -55,9 +62,11 @@ export default [{
     hasSubtitles: false,
     details: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard',
     rating: 1,
-    ratingNumberOfPeople: 5
+    ratingNumberOfPeople: 5,
+    price: 120,
+    createdDate: "2019-08-18T02:24:32.856Z",
+    type: "relaxation"
   }, {
-    price: 'Rs 45000',
     heading: 'Hyderabad - Kanha Shanti Vanam',
     description: 'December 4th to December 30th, 2019',
     imgSrc: 'https://placehold.it/600x300',
@@ -67,6 +76,9 @@ export default [{
     hasSubtitles: true,
     details: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard',
     rating: 5,
-    ratingNumberOfPeople: 1201
+    ratingNumberOfPeople: 1201,
+    price: 190,
+    createdDate: "2019-08-18T02:24:32.856Z",
+    type: "meditation"
   }
 ]
