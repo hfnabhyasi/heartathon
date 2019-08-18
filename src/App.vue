@@ -5,7 +5,9 @@
     :styles="{heading:'h3',description:'h6'}"
   />
 
-  <CarouselGrid />
+  <!-- <CarouselGrid /> -->
+  <!-- <Tabs/> -->
+  <IconHeader/>
 
   <!-- CourseRow  -->
   <!-- <template v-for="(course,i) in courses"> -->
@@ -23,7 +25,9 @@ import HeaderData from './data/header'
 // import CourseListItem from  './components/CourseListItem'
 import courses from './data/courses'
 // import HoveredCard from './components/HoveredCard'
-import CarouselGrid from './components/CarouselGrid'
+// import CarouselGrid from './components/CarouselGrid'
+// import Tabs from './components/Tabs'
+import IconHeader from './components/IconHeader'
 
 
 export default {
@@ -37,7 +41,9 @@ export default {
     HeaderComp,
     // CourseListItem,
     // HoveredCard,
-    CarouselGrid
+    // CarouselGrid,
+    // Tabs,
+    IconHeader
 
     // CourseRow
   }
