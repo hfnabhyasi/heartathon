@@ -3,7 +3,7 @@
     <CategorySortDropdown @categoryOptionSelected="categoryOptionSelected" />
 
     <SortDropdown @sortOptionSelected="sortOptionSelected" />
-
+    <iframe width="720" height="405" src="https://www.youtube.com/embed/?listType=playlist&list=PL1QpxVYcCuCZYr_UDHYQ0O3z1uysRgTfa" frameborder="0" allowfullscreen></iframe>
     <GridListSwitch
       :isGridActive="true"
       :isListActive="false"
@@ -12,15 +12,25 @@
     />
 
     <div>
-        <h1>
-          <span v-if="isGrid">Show Grid</span>
-          <span v-if="isList">Show List</span>
-        </h1>
+          <div v-if="isGrid">
+            <pre class="pre pre-scrollable bg-primary text-white">
+              <h1>
+                Grid View
+              </h1>
+              {{ displayedData }}
+            </pre>
+          </div>
+          <div v-if="isList">
+            <pre class="pre pre-scrollable bg-primary text-white">
+              <h1>
+                List VIEW
+              </h1>
+              {{ displayedData }}
+            </pre>
+          </div>
     </div>
 
-    <pre class="pre pre-scrollable bg-primary text-white">
-      {{ displayedData }}
-    </pre>
+
 
   </div>
 </template>
