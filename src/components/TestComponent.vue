@@ -84,7 +84,7 @@ function sortOptionSelected(sortOption) {
   else if (sortOption === 'dateOldest')
     this.displayedData.sort(sortByDate.bind(this, sortOption));
   else if (sortOption === 'dateNewest')
-    this.myData.sort(sortByDate.bind(this, sortOption));
+    this.displayedData.sort(sortByDate.bind(this, sortOption));
 }
 
 function sortByPrice(sortOption, b, a) {

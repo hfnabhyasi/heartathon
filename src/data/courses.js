@@ -10,7 +10,7 @@ export default [{
     hasSubtitles: true,
     details: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard',
     price: 300,
-    createdDate: "2019-08-18T02:24:32.856Z",
+    createdDate: new Date(Date.now() - 1000),
     type: "meditation"
   }, {
     heading: 'Meditation',
@@ -24,7 +24,7 @@ export default [{
     hasSubtitles: false,
     details: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard',
     price: 250,
-    createdDate: "2019-08-18T02:24:32.856Z",
+    createdDate: new Date(Date.now() + 1000),
     type: "meditation"
   },
   {
@@ -38,7 +38,7 @@ export default [{
     rating: 2,
     ratingNumberOfPeople: 350,
     price: 250,
-    createdDate: "2019-08-18T02:24:32.856Z",
+    createdDate: new Date(Date.now() - 1200),
     type: "relaxation"
   }, {
     heading: 'Chennai - BMA',
@@ -50,7 +50,7 @@ export default [{
     hasSubtitles: true,
     details: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard',
     price: 150,
-    createdDate: "2019-08-18T02:24:32.856Z",
+    createdDate: new Date(Date.now() - 1300),
     type: "yoga"
   }, {
     heading: 'Hyderabad - Kanha Shanti Vanam',
@@ -64,7 +64,7 @@ export default [{
     rating: 1,
     ratingNumberOfPeople: 5,
     price: 120,
-    createdDate: "2019-08-18T02:24:32.856Z",
+    createdDate: new Date(Date.now() + 1400),
     type: "relaxation"
   }, {
     heading: 'Hyderabad - Kanha Shanti Vanam',
@@ -78,7 +78,7 @@ export default [{
     rating: 5,
     ratingNumberOfPeople: 1201,
     price: 190,
-    createdDate: "2019-08-18T02:24:32.856Z",
+    createdDate: new Date(Date.now() - 2000),
     type: "meditation"
   }
 ]
