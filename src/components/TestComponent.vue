@@ -3,7 +3,7 @@
     <CategorySortDropdown @categoryOptionSelected="categoryOptionSelected" />
 
     <SortDropdown @sortOptionSelected="sortOptionSelected" />
-    
+
     <GridListSwitch
       :isGridActive="true"
       :isListActive="false"
@@ -12,15 +12,15 @@
     />
 
     <div>
-          <div v-if="isGrid">
-            <pre class="pre pre-scrollable bg-primary text-white">
-              <h1>
-                Grid View
-              </h1>
-              {{ displayedData }}
-            </pre>
-          </div>
-          <div v-if="isList">
+      <div v-if="isGrid">
+        <pre class="pre pre-scrollable bg-primary text-white">
+          <h1>
+            Grid View
+          </h1>
+          {{ displayedData }}
+        </pre>
+      </div>
+      <div v-if="isList">
             <pre class="pre pre-scrollable bg-primary text-white">
               <h1>
                 List VIEW
