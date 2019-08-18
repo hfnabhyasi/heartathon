@@ -3,27 +3,31 @@
   <div class="container">
     <HeaderComp :content="HeaderData" :styles="{heading:'h3',description:'h6'}" />
     <!-- <CourseRow /> -->
-    <GridListSwitch />
+    <TestComponent :content="Courses" />
   </div>
 </div>
 </template>
 
 <script>
-import HeaderComp from "./components/HeaderComp"
-// import CourseRow from "./components/CourseRow"
+// Data
 import HeaderData from './data/header'
-import GridListSwitch from './components/TestComponent'
+import Courses from './data/courses'
+// Components
+import HeaderComp from "./components/HeaderComp"
+import TestComponent from './components/TestComponent'
+// import CourseRow from "./components/CourseRow"
 
 export default {
   data() {
     return {
-      HeaderData
+      HeaderData,
+      Courses
     }
   },
   components: {
     HeaderComp,
     // CourseRow,
-    GridListSwitch
+    TestComponent
   }
 }
 

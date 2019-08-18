@@ -5,20 +5,15 @@
       <CategorySortDropdown @categoryOptionSelected="categoryOptionSelected" />
       <SortDropdown @sortOptionSelected="sortOptionSelected" />
       <GridListSwitch
-      :isGridActive="true"
-      :isListActive="false"
-      @toggleGridView="showGridLayout()"
-      @toggleListView="showListLayout()"
+        :isGridActive="true"
+        :isListActive="false"
+        @toggleGridView="showGridLayout()"
+        @toggleListView="showListLayout()"
       />
     </div>
     <div>
       <div v-if="isGrid">
-        <pre class="pre pre-scrollable bg-primary text-white">
-          <h1>
-            Grid View
-          </h1>
-          <p>{{ displayedData }}</p>
-        </pre>
+        <CourseRow :content="displayedData" />
       </div>
       <div v-if="isList">
         <pre class="pre pre-scrollable bg-primary text-white">
@@ -36,11 +31,13 @@
 import GridListSwitch from './GridListSwitch'
 import SortDropdown from './SortDropdown'
 import SearchBar from './SearchBar'
+import CourseRow from './CourseRow'
 import CategorySortDropdown from './CategorySortDropdown'
 
 export default {
   data,
-  components: { GridListSwitch, SearchBar, SortDropdown, CategorySortDropdown },
+  props:["content"],
+  components: { GridListSwitch, SearchBar, SortDropdown, CategorySortDropdown, CourseRow  },
   methods: { showGridLayout, showListLayout, sortOptionSelected, categoryOptionSelected },
   mounted
 }
@@ -67,12 +64,12 @@ function data() {
 }
 
 function mounted() {
-  this.displayedData = this.myData;
-  this.displayedData.sort(sortByDate.bind(this, 'dateNewest'));
+  this.displayedData = this.content;
+  this.content.sort(sortByDate.bind(this, 'dateNewest'));
 }
 
 function categoryOptionSelected(category) {
-    this.displayedData = this.myData.filter(
+    this.displayedData = this.content.filter(
       item => category === 'all' ?
         true :
         item.type === category

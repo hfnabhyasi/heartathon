@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="row">
-    <div class="col-4 my-2" v-for="(course, i) in Courses" :key="i">
+    <div class="col-4 my-2" v-for="(course, i) in content" :key="i">
       <Card :content="course" />
     </div>
   </div>
@@ -11,15 +11,12 @@ import Card from "./Card"
 import Courses from '../data/courses'
 
 export default {
-  data() {
-    return {
-      Courses
-    }
-  },
-  components:{
+  props: ["content"],
+  components: {
     Card
   }
 }
+
 </script>
 
 <style lang="css" scoped>
