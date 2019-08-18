@@ -16,12 +16,17 @@
         <CourseRow :content="displayedData" />
       </div>
       <div v-if="isList">
-        <pre class="pre pre-scrollable bg-primary text-white">
+        <CourseListItem
+          v-for="(course, i) in displayedData"
+          :key="i"
+          :content="course"
+        />
+        <!-- <pre class="pre pre-scrollable bg-primary text-white">
           <h1>
             List VIEW
           </h1>
           <p>{{ displayedData }}</p>
-        </pre>
+        </pre> -->
       </div>
     </div>
   </div>
@@ -29,6 +34,7 @@
 
 <script>
 import GridListSwitch from './GridListSwitch'
+import CourseListItem from './CourseListItem'
 import SortDropdown from './SortDropdown'
 import SearchBar from './SearchBar'
 import CourseRow from './CourseRow'
@@ -37,7 +43,7 @@ import CategorySortDropdown from './CategorySortDropdown'
 export default {
   data,
   props:["content"],
-  components: { GridListSwitch, SearchBar, SortDropdown, CategorySortDropdown, CourseRow  },
+  components: { GridListSwitch, SearchBar, SortDropdown, CategorySortDropdown, CourseRow, CourseListItem  },
   methods: { showGridLayout, showListLayout, sortOptionSelected, categoryOptionSelected },
   mounted
 }
