@@ -8,7 +8,6 @@
 
 <script>
 import Card from "./Card"
-import Courses from '../data/courses'
 
 export default {
   props: ["content"],
