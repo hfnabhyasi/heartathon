@@ -5,11 +5,13 @@
     :styles="{heading:'h3',description:'h6'}"
   />
 
+  <CarouselGrid />
+
   <!-- CourseRow  -->
-  <template v-for="(course,i) in courses">
+  <!-- <template v-for="(course,i) in courses"> -->
     <!-- <CourseListItem :content="course" :key="i"/> -->
-    <HoveredCard :content="course" :key="i"></HoveredCard>
-  </template>
+    <!-- <HoveredCard :content="course" :key="i"></HoveredCard> -->
+  <!-- </template> -->
 
 </div>
 </template>
@@ -18,9 +20,10 @@
 import HeaderComp from "./components/HeaderComp"
 // import CourseRow from "./components/CourseRow"
 import HeaderData from './data/header'
-import CourseListItem from  './components/CourseListItem'
+// import CourseListItem from  './components/CourseListItem'
 import courses from './data/courses'
-import HoveredCard from './components/HoveredCard'
+// import HoveredCard from './components/HoveredCard'
+import CarouselGrid from './components/CarouselGrid'
 
 
 export default {
@@ -32,8 +35,9 @@ export default {
   },
   components: {
     HeaderComp,
-    CourseListItem,
-    HoveredCard
+    // CourseListItem,
+    // HoveredCard,
+    CarouselGrid
 
     // CourseRow
   }
