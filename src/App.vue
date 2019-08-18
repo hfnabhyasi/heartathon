@@ -2,9 +2,7 @@
 <div>
   <div class="container">
     <HeaderComp :content="HeaderData" :styles="{heading:'h3',description:'h6'}" />
-    <!-- <CourseRow /> -->
-    <!-- <TestComponent :content="Courses" /> -->
-    <YouTubePopUp />
+    <TestComponent :content="Courses" />
   </div>
 </div>
 </template>
@@ -15,9 +13,7 @@ import HeaderData from './data/header'
 import Courses from './data/courses'
 // Components
 import HeaderComp from "./components/HeaderComp"
-// import TestComponent from './components/TestComponent'
-// import CourseRow from "./components/CourseRow"
-import YouTubePopUp from './components/TestComponent-YouTubeVideoPopup'
+import TestComponent from './components/TestComponent'
 
 export default {
   data() {
@@ -28,9 +24,7 @@ export default {
   },
   components: {
     HeaderComp,
-    // CourseRow,
-    // TestComponent
-    YouTubePopUp
+    TestComponent
   }
 }
 
