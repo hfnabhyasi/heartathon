@@ -6,8 +6,8 @@
     </button>
 
     <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-lg" role="document">
+    <div class="modal fade p-0" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg border border-primary" role="document">
         <div class="modal-content">
           <div class="modal-body">
             <iframe class="w-100" height="500" src="https://www.youtube.com/embed/videoseries?list=PLT02Kxa-Pd_GbAVYz_v2UGwZm45U0XXcF" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -16,7 +16,6 @@
       </div>
     </div>
   </div>
-  
 </template>
 
 <script>
